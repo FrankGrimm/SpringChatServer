@@ -11,7 +11,8 @@ function setConnected(connected)
 function connect()
 {
     ws = new WebSocket(url);
-    ws.onopen = function() {
+
+    ws.onopen = function(event) {
         setConnected(true);
         log('Info: Connection established!');
     };
